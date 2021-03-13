@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dictionary_simple</title>
+</head>
+<body>
+    <label>Tim kiem mot tu</label>
+    <input type="text" id="word">
+    <button id="looking">Looking</button>
+    <p id="result"></p>
+<script>
+
+    document.getElementById("looking").addEventListener('click',function(){
+        let arrayEn = ["cat","dog","mouse","chicken","tiger"];
+        let arrayVn = ["meo","cho","chuot","ga","tiger"];
+        let value = document.getElementById("word").value;
+        console.log(value)
+        let index = null;
+        for(let i=0;i<arrayEn.length;i++){
+            if(value == arrayEn[i]){
+                index = i;
+            }
+        }
+        if(index == null){
+            document.getElementById("result").innerHTML = "Khong tim thay";
+        }
+        else document.getElementById("result").innerHTML = arrayVn[index];
+    } )
+</script>
+</body>
+</html>
