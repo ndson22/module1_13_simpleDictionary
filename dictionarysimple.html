@@ -19,16 +19,11 @@
         let arrayVn = ["meo","cho","chuot","ga","tiger"];
         let value = document.getElementById("word").value;
         console.log(value)
-        let index = null;
-        for(let i=0;i<arrayEn.length;i++){
-            if(value == arrayEn[i]){
-                index = i;
-            }
-        }
-        if(index == null){
+ 
+        if(arrayEn.indexOf(value) == -1){
             document.getElementById("result").innerHTML = "Khong tim thay";
         }
-        else document.getElementById("result").innerHTML = arrayVn[index];
+        else document.getElementById("result").innerHTML = arrayVn[arrayEn.indexOf(value)];
     } )
 </script>
 </body>
